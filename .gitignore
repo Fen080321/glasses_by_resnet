@@ -1,0 +1,22 @@
+# 数据集（体积大，不入库）
+data/
+data1/
+
+# 模型权重与训练输出
+*.pth
+*.pt
+*.onnx
+train_curve.png
+
+# Python 缓存 / 虚拟环境
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+
+# IDE / 系统文件
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
