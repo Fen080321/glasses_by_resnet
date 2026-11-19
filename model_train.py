@@ -16,10 +16,12 @@ import time
 import pandas as pd
 
 def train_val_data_process():
-    train_data = ImageFolder(root = "./data1/train",
+    train_data = ImageFolder(root = "D:/proj/pyproject/asl_by_resnet/train",
+                             transform=transforms.Compose([transforms.Resize((224,224)),transforms.ToTensor()]))
+    val_data = ImageFolder(root = "D:/proj/pyproject/asl_by_resnet/val",
                              transform=transforms.Compose([transforms.Resize((224,224)),transforms.ToTensor()]))
     
-    train_data, val_data = data.random_split(train_data,[round(0.8*len(train_data)),round(0.2*len(train_data))])
+    
     train_dataloader = data.DataLoader(dataset=train_data,
                                        batch_size=128,
                                        shuffle=True,

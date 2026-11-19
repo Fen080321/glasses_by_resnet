@@ -55,7 +55,7 @@ class resnet(nn.Module):
         self.b6 = nn.Sequential(
             nn.AdaptiveAvgPool2d((1,1)),
             nn.Flatten(),
-            nn.Linear(512,26)
+            nn.Linear(512,2)
         )
         
 

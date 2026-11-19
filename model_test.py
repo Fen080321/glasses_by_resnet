@@ -9,7 +9,7 @@ from PIL import Image
 from torchvision import transforms
 
 def test_data_process():
-    test_data=ImageFolder(root="D:/proj/pyproject/asl_by_resnet/data1/test",
+    test_data=ImageFolder(root="D:/proj/pyproject/asl_by_resnet/test",
                           transform=transforms.Compose([transforms.Resize((224,224)),transforms.ToTensor()]))
     test_dataloader=data.DataLoader(dataset=test_data,
                                     batch_size=1,
@@ -53,7 +53,9 @@ if __name__=="__main__":
     #         label = b_y.item()
     #         print("pre_lab:{}    ,   true_lab:{}".format(CLASSES[result],CLASSES[label]))
 
-    # image = Image.open("D:/proj/pyproject/asl_by_resnet/OIP-C (2).jpg")
+    # classes = ["glass","no_glass"]
+
+    # image = Image.open("IMG20261118214221..jpg")
     # train_transforms = transforms.Compose([transforms.Resize((224,224)),transforms.ToTensor()])
     # image = train_transforms(image)
     # image = image.unsqueeze(0)
@@ -64,5 +66,5 @@ if __name__=="__main__":
     #     output = model(image)
     #     pre_lab = torch.argmax(output,dim=1)
     #     pre_lab = pre_lab.item()
-    #     print("i think it is {}".format(CLASSES[pre_lab]))
+    #     print("i think it is {}".format(classes[pre_lab]))
 
