@@ -21,11 +21,11 @@ def train_val_data_process():
     
     train_data, val_data = data.random_split(train_data,[round(0.8*len(train_data)),round(0.2*len(train_data))])
     train_dataloader = data.DataLoader(dataset=train_data,
-                                       batch_size=64,
+                                       batch_size=128,
                                        shuffle=True,
                                        num_workers=0)
     val_dataloader = data.DataLoader(dataset=val_data,
-                                     batch_size=64,
+                                     batch_size=128,
                                      shuffle=True,
                                      num_workers=0)
     return train_dataloader, val_dataloader
