@@ -3,7 +3,7 @@ data/
 data1/
 
 # 所有图片文件（数据集图片一律不提交）
-*.png
+
 *.jpg
 *.jpeg
 *.bmp
@@ -11,7 +11,7 @@ data1/
 *.gif
 
 # 模型权重与训练输出
-*.pth
+
 *.pt
 *.onnx
 train_curve.png
