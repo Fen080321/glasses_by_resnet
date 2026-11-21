@@ -14,7 +14,6 @@ data1/
 
 *.pt
 *.onnx
-train_curve.png
 
 # Python 缓存 / 虚拟环境
 __pycache__/
